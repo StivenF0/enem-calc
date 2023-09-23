@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de notas para o Enem</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="compatibilities.css" />
+    <!-- <script type="module" src="/main.js" defer></script> -->
+  </head>
+  <body>
+    <main class="container">
+      <h1>Calculadora Enem</h1>
+      <p class="about">
+        Essa calculadora tem o objetivo de realizar simulações de notas do enem,
+        baseado em uma pontuação média por questão, emulando o TRI.
+      </p>
+      <br />
+      <h2>Quantidade de acertos e nota</h2>
+      <form class="form" id="correctAnswers" action="/">
+        <div class="line">
+          <div class="line-desc">Linguagens e suas tecnologias</div>
+          <input type="number" placeholder="LT" />
+        </div>
+        <div class="line">
+          <div class="line-desc">Ciências Humanas</div>
+          <input type="number" placeholder="CH" />
+        </div>
+        <div class="line">
+          <div class="line-desc">Ciências da Natureza</div>
+          <input type="number" placeholder="CN" />
+        </div>
+        <div class="line">
+          <div class="line-desc">Matemática e suas tecnologias</div>
+          <input type="number" placeholder="MT" />
+        </div>
+        <div class="line">
+          <div class="line-desc">Nota da Redação</div>
+          <input type="text" placeholder="R" />
+        </div>
+      </form>
+      <br />
+      <h2>Pesos das disciplinas</h2>
+      <form class="form" id="disciplineWeight" action="/">
+        <div class="line">
+          <div class="line-desc">Linguagens e suas tecnologias</div>
+          <input type="number" placeholder="LT (Padrão: 1)" />
+        </div>
+        <div class="line">
+          <div class="line-desc">Ciências Humanas</div>
+          <input type="number" placeholder="CH (Padrão: 1)" />
+        </div>
+        <div class="line">
+          <div class="line-desc">Ciências da Natureza</div>
+          <input type="number" placeholder="CN (Padrão: 1)" />
+        </div>
+        <div class="line">
+          <div class="line-desc">Matemática e suas tecnologias</div>
+          <input type="number" placeholder="MT (Padrão: 1)" />
+        </div>
+        <div class="line">
+          <div class="line-desc">Nota da Redação</div>
+          <input type="text" placeholder="R (Padrão: 1)" />
+        </div>
+      </form>
+      <br />
+      <h2>Opções Extras</h2>
+      <form class="form" id="" action="/">
+        <div class="line">
+          <input type="checkbox" />
+          <div class="line-desc">Nota de corte</div>
+          <input type="number" placeholder="Corte" />
+        </div>
+    </main>
+  </body>
+</html>
