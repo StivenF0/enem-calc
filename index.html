@@ -17,27 +17,31 @@
         baseado em uma pontuação média por questão, emulando o TRI.
       </p>
       <br />
+      <h3 class="result">
+        Sua média foi 720,42. Você foi aprovado com a diferença de 19,65 pontos.
+      </h3>
+      <br />
       <h2>Quantidade de acertos e nota</h2>
       <form class="form" id="correctAnswers" action="/">
         <div class="line">
           <div class="line-desc">Linguagens e suas tecnologias</div>
-          <input type="number" placeholder="LT" />
+          <input type="number" min="0" max="45" placeholder="LT" />
         </div>
         <div class="line">
           <div class="line-desc">Ciências Humanas</div>
-          <input type="number" placeholder="CH" />
+          <input type="number" min="0" max="45" placeholder="CH" />
         </div>
         <div class="line">
           <div class="line-desc">Ciências da Natureza</div>
-          <input type="number" placeholder="CN" />
+          <input type="number" min="0" max="45" placeholder="CN" />
         </div>
         <div class="line">
           <div class="line-desc">Matemática e suas tecnologias</div>
-          <input type="number" placeholder="MT" />
+          <input type="number" min="0" max="45" placeholder="MT" />
         </div>
         <div class="line">
           <div class="line-desc">Nota da Redação</div>
-          <input type="text" placeholder="R" />
+          <input type="number" min="0" max="1000" placeholder="R" />
         </div>
       </form>
       <br />
@@ -45,33 +49,59 @@
       <form class="form" id="disciplineWeight" action="/">
         <div class="line">
           <div class="line-desc">Linguagens e suas tecnologias</div>
-          <input type="number" placeholder="LT (Padrão: 1)" />
+          <input type="number" min="0" placeholder="LT (padrão: 1)" />
         </div>
         <div class="line">
           <div class="line-desc">Ciências Humanas</div>
-          <input type="number" placeholder="CH (Padrão: 1)" />
+          <input type="number" min="0" placeholder="CH (padrão: 1)" />
         </div>
         <div class="line">
           <div class="line-desc">Ciências da Natureza</div>
-          <input type="number" placeholder="CN (Padrão: 1)" />
+          <input type="number" min="0" placeholder="CN (padrão: 1)" />
         </div>
         <div class="line">
           <div class="line-desc">Matemática e suas tecnologias</div>
-          <input type="number" placeholder="MT (Padrão: 1)" />
+          <input type="number" min="0" placeholder="MT (padrão: 1)" />
         </div>
         <div class="line">
           <div class="line-desc">Nota da Redação</div>
-          <input type="text" placeholder="R (Padrão: 1)" />
+          <input type="number" min="0" placeholder="R (padrão: 1)" />
         </div>
       </form>
       <br />
       <h2>Opções Extras</h2>
       <form class="form" id="" action="/">
-        <div class="line">
-          <input type="checkbox" />
+        <div class="line selection">
+          <input type="checkbox" id="passingScore" />
           <div class="line-desc">Nota de corte</div>
           <input type="number" placeholder="Corte" />
         </div>
+      </form>
+      <br />
+      <h2>Notas mínimas e máximas personalizadas</h2>
+      <form class="form" id="" action="/">
+        <div class="line minmax">
+          <div class="line-desc">Linguagens e suas tecnologias</div>
+          <input type="number" placeholder="(padrão:300,28)" />
+          <input type="number" placeholder="(padrão:801)" />
+        </div>
+        <div class="line minmax">
+          <div class="line-desc">Ciências Humanas</div>
+          <input type="number" placeholder="(padrão:323,29)" />
+          <input type="number" placeholder="(padrão:839,2)" />
+        </div>
+        <div class="line minmax">
+          <div class="line-desc">Ciências da Natureza</div>
+          <input type="number" placeholder="(padrão:344,49)" />
+          <input type="number" placeholder="(padrão:875,3)" />
+        </div>
+        <div class="line minmax">
+          <div class="line-desc">Matemática e suas tecnologias</div>
+          <input type="number" placeholder="(padrão:372,59)" />
+          <input type="number" placeholder="(padrão:985,7)" />
+        </div>
+      </form>
+      <button class="calculate-button" id="calculateButton">Calcular</button>
     </main>
   </body>
 </html>

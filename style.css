@@ -30,6 +30,10 @@
   margin-top: 10px;
 }
 
+.container h3 {
+  margin-top: 8px;
+}
+
 .container .about {
   margin-top: 3rem;
   font-weight: 600;
@@ -67,3 +71,27 @@
   border-radius: 0.6rem;
 }
 
+.form .line.selection {
+  grid-template-columns: 0.3fr 1.7fr 3fr;
+}
+
+.line.selection input[type="checkbox"] {
+  height: 1rem;
+  width: 1rem;
+  align-self: center;
+}
+
+.form .line.minmax {
+  grid-template-columns: 2fr 1.7fr 1.7fr;
+}
+
+.container .calculate-button {
+  margin-top: 1.5rem;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 0.6rem;
+  padding: 1rem 3rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
