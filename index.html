@@ -7,7 +7,7 @@
     <title>Calculadora de notas para o Enem</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="compatibilities.css" />
-    <!-- <script type="module" src="/main.js" defer></script> -->
+    <script type="module" src="/js/main.js" defer></script>
   </head>
   <body>
     <main class="container">
@@ -17,31 +17,29 @@
         baseado em uma pontuação média por questão, emulando o TRI.
       </p>
       <br />
-      <h3 class="result">
-        Sua média foi 720,42. Você foi aprovado com a diferença de 19,65 pontos.
-      </h3>
+      <h3 class="result" id="result"></h3>
       <br />
       <h2>Quantidade de acertos e nota</h2>
       <form class="form" id="correctAnswers" action="/">
         <div class="line">
           <div class="line-desc">Linguagens e suas tecnologias</div>
-          <input type="number" min="0" max="45" placeholder="LT" />
+          <input type="number" min="0" max="45" placeholder="LT" id="LT" />
         </div>
         <div class="line">
           <div class="line-desc">Ciências Humanas</div>
-          <input type="number" min="0" max="45" placeholder="CH" />
+          <input type="number" min="0" max="45" placeholder="CH" id="CH" />
         </div>
         <div class="line">
           <div class="line-desc">Ciências da Natureza</div>
-          <input type="number" min="0" max="45" placeholder="CN" />
+          <input type="number" min="0" max="45" placeholder="CN" id="CN" />
         </div>
         <div class="line">
           <div class="line-desc">Matemática e suas tecnologias</div>
-          <input type="number" min="0" max="45" placeholder="MT" />
+          <input type="number" min="0" max="45" placeholder="MT" id="MT" />
         </div>
         <div class="line">
           <div class="line-desc">Nota da Redação</div>
-          <input type="number" min="0" max="1000" placeholder="R" />
+          <input type="number" min="0" max="1000" placeholder="R" id="R" />
         </div>
       </form>
       <br />
@@ -49,59 +47,61 @@
       <form class="form" id="disciplineWeight" action="/">
         <div class="line">
           <div class="line-desc">Linguagens e suas tecnologias</div>
-          <input type="number" min="0" placeholder="LT (padrão: 1)" />
+          <input type="number" min="0" placeholder="LT (padrão: 1)" id="LT" />
         </div>
         <div class="line">
           <div class="line-desc">Ciências Humanas</div>
-          <input type="number" min="0" placeholder="CH (padrão: 1)" />
+          <input type="number" min="0" placeholder="CH (padrão: 1)" id="CH" />
         </div>
         <div class="line">
           <div class="line-desc">Ciências da Natureza</div>
-          <input type="number" min="0" placeholder="CN (padrão: 1)" />
+          <input type="number" min="0" placeholder="CN (padrão: 1)" id="CN" />
         </div>
         <div class="line">
           <div class="line-desc">Matemática e suas tecnologias</div>
-          <input type="number" min="0" placeholder="MT (padrão: 1)" />
+          <input type="number" min="0" placeholder="MT (padrão: 1)" id="MT" />
         </div>
         <div class="line">
           <div class="line-desc">Nota da Redação</div>
-          <input type="number" min="0" placeholder="R (padrão: 1)" />
+          <input type="number" min="0" placeholder="R (padrão: 1)" id="R" />
         </div>
       </form>
       <br />
       <h2>Opções Extras</h2>
       <form class="form" id="" action="/">
         <div class="line selection">
-          <input type="checkbox" id="passingScore" />
+          <input type="checkbox" id="passingScoreCheck" />
           <div class="line-desc">Nota de corte</div>
-          <input type="number" placeholder="Corte" />
+          <input type="number" id="passingScore" placeholder="Corte" disabled />
         </div>
       </form>
       <br />
       <h2>Notas mínimas e máximas personalizadas</h2>
-      <form class="form" id="" action="/">
+      <form class="form" id="scoreMinMax" action="/">
         <div class="line minmax">
           <div class="line-desc">Linguagens e suas tecnologias</div>
-          <input type="number" placeholder="(padrão:300,28)" />
-          <input type="number" placeholder="(padrão:801)" />
+          <input type="number" placeholder="(padrão:300,58)" id="LTMIN" />
+          <input type="number" placeholder="(padrão:801)" id="LTMAX" />
         </div>
         <div class="line minmax">
           <div class="line-desc">Ciências Humanas</div>
-          <input type="number" placeholder="(padrão:323,29)" />
-          <input type="number" placeholder="(padrão:839,2)" />
+          <input type="number" placeholder="(padrão:323,29)" id="CHMIN" />
+          <input type="number" placeholder="(padrão:839,2)" id="CHMAX" />
         </div>
         <div class="line minmax">
           <div class="line-desc">Ciências da Natureza</div>
-          <input type="number" placeholder="(padrão:344,49)" />
-          <input type="number" placeholder="(padrão:875,3)" />
+          <input type="number" placeholder="(padrão:344,49)" id="CNMIN" />
+          <input type="number" placeholder="(padrão:875,3)" id="CNMAX" />
         </div>
         <div class="line minmax">
           <div class="line-desc">Matemática e suas tecnologias</div>
-          <input type="number" placeholder="(padrão:372,59)" />
-          <input type="number" placeholder="(padrão:985,7)" />
+          <input type="number" placeholder="(padrão:372,59)" id="MTMIN" />
+          <input type="number" placeholder="(padrão:985,7)" id="MTMAX" />
         </div>
       </form>
       <button class="calculate-button" id="calculateButton">Calcular</button>
+      <br />
+      <h3 class="result" id="result"></h3>
     </main>
   </body>
 </html>
