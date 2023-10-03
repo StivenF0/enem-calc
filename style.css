@@ -11,7 +11,7 @@
 }
 
 .container {
-  width: 800px;
+  width: clamp(12rem, 99%, 800px);
   min-height: 100vh;
   margin: 0 auto;
   padding: 0 2rem;
@@ -94,4 +94,35 @@
   font-weight: 600;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+/* Responsiviness */
+
+@media (max-width: 560px) {
+  .form .line {
+    grid-template-columns: 1fr;
+    height: 3.4rem;
+  }
+
+  .form .line.selection {
+    grid-template-columns: 0.2fr 1.8fr;
+  }
+
+  .form .line.selection #passingScore {
+    grid-column: 1 / span 2;
+  }
+
+  .form .line.minmax {
+    grid-template-columns: 1fr 1fr;
+    height: 4.4rem;
+  }
+
+  .line.minmax .line-desc {
+    grid-column: 1 / span 2;
+  }
+
+  .form .line.minmax input {
+    border-radius: .2rem;
+    font-size: 0.8rem;
+  }
 }
